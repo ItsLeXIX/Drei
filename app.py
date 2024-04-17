@@ -9,7 +9,6 @@ def get_customer_data():
     cursor = conn.cursor()
     cursor.execute('SELECT * FROM customers')
     data = cursor.fetchall()
-    # Convert data to list of dictionaries
     data = [dict(row) for row in data]
 
     conn.close()
